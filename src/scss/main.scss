@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+$white: #FFFFFF;
+$seasalt: #f7f7f7;
+$platinum: #CFDBD5;
+$alabaster: #E8EDDF;
+$saffron: #F5CB5C;
+$eerie-black: #242423;
+$jet-black: #333533;
+
+body {
+    background-color: $white;
+    font-family: 'Mulish', sans-serif;
+    color: $eerie-black;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+}
+
+a {
+    color: $eerie-black;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a, button {
+    text-decoration: none;
+    font-family: 'Mulish', sans-serif;
+    cursor: pointer;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+    padding: 0;
+}
+
+select {
+    padding: 5px;
+    border-radius: 6px;
+    border: 1px solid $alabaster;
+}
+
+.header {
+    background-color: $seasalt;
+    margin-bottom: 15px;
+    padding: 15px;
+
+    .home-link {
+        font-size: 18px;
+    }
+}
+
+// layout
+.flex {
+    display: flex;
+
+    &-30 {
+        flex: 0 0 30%;
+    }
+
+    &-70 {
+        flex: 0 0 70%;
+    }
+}
+
+// form
+
+.form {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .form-fields {
+        flex-wrap: wrap;
+    }
+
+    .form-field {
+        margin: 20px 0 0;
+        flex: 0 0 50%
+    }
+
+    &-button {
+        border-radius: 4px;
+        padding: 18px;
+        background-color: $saffron;
+        border: 1px solid $saffron;
+        outline: 0;
+        width: 200px;
+    }
+
+    .textarea {
+        flex: 0 0 100%;
+    }
+  
+    &-field {  
+      &-input {
+        font-family: 'Mulish', sans-serif;
+        width: 90%;
+        border-radius: 4px;
+        padding: 18px;
+        border: 1px solid $alabaster;
+        outline: 0;
+      }
+  
+      &-label {
+        display: block;
+        font-size: 12px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 0 0 4px 4px;
+      }
+  
+      &-textarea {
+        font-family: 'Mulish', sans-serif;
+        width: 100%;
+        border-radius: 4px;
+        padding: 18px;
+        border: 1px solid $alabaster;
+        outline: 0;
+        height: 400px;
+      }
+    }
+
+    .select {
+        width: 90%;
+        padding: 18px;
+        border-radius: 4px;
+        border: 1px solid $alabaster;
+    }
+  }
+
+// general
+.add-book {
+    background-color: $saffron;
+    color: $jet-black;
+    aspect-ratio: 1/1;
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    border-radius: 50%;
+    position: fixed;
+    top: 30px;
+    right: 30px;
+}
+
+// general book
+.book {
+    // book banner
+    &-banner {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 30px 40px;
+        background-color: $platinum;
+        border-radius: 6px;
+        margin-bottom: 30px;
+
+        &-card {
+            background: $white;
+            border-radius: 6px;
+            padding: 20px 30px;
+        }
+
+        &-details {
+            padding: 5px 20px;
+            
+            .select {
+                padding: 5px;
+                border-radius: 6px;
+                border: 1px solid $alabaster;
+            }
+        }
+
+        &-title {
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        &-author {
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        &-image {
+            &-default {
+                display: block;
+                width: 100px;
+                border-radius: 2px;
+                background-color: $seasalt;
+                aspect-ratio: 1 / 1.6;
+            }
+        }
+    }
+
+    &-list {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+
+        &-container {
+            background-color: $seasalt;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 40px;
+        }
+
+        &-header {
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        &-heading {
+            font-size: 24px;
+            font-weight: 500;
+            padding: 0 10px 20px;
+        }
+
+        &-filters {
+            gap: 10px;
+            align-items: flex-start;
+        }
+
+        &-read {
+            padding: 5px 0;
+            
+            .icon {
+                margin: 0 5px; 
+            }
+        }
+    }
+
+    &-card {
+        flex: 0 0 12.5%;
+        margin: 0 0 15px;;
+
+        &-title {
+            font-size: 12px;
+            font-weight: 700;
+            padding: 10px 10px 4px;
+        }
+
+        &-author {
+            font-size: 10px;
+            font-weight: 500;
+            padding: 0 10px;
+        }
+
+        &-image {
+            display: block;
+            width: 100%;
+            border-radius: 2px;
+            background-color: $white;
+            aspect-ratio: 1 / 1.6;
+
+            &-container {
+                padding: 4px 10px 0;
+            }
+        }
+
+        &-read {
+            padding: 5px 10px 0;
+            color: $platinum;
+        }
+    }
+
+    &-thumbnail {
+        display: block;
+        width: 100%;
+        aspect-ratio: 1 / 1.6;
+        background-color: $seasalt;
+    }
+
+    &-page {
+        max-width: 1200px;
+        margin: 0 auto;
+
+        &-heading {
+            font-size: 20px;
+            font-weight: 700;
+        }
+        &-subheading {
+            font-size: 16px;
+            font-weight: 400;
+        }
+    }
+}
