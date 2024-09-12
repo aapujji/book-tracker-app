@@ -2,6 +2,18 @@ import { createClient } from "@supabase/supabase-js";
 
 export const supabase = createClient(import.meta.env.VITE_PUBLIC_SUPABASE_URL, import.meta.env.VITE_PUBLIC_SUPABASE_KEY);
 
+export const getBooks = async (from, to) => {
+    const data = supabase.from('books').select('*').order('id', { ascending: true }).range(from, to);
+    return data;
+};
+
+export const searchBooks = async (query) => {
+    const data = await supabase.from('books').select().textSearch('title', query, {
+        config: 'english'
+    });
+    return data;
+};
+
 export const getBooksData = async (key, value) => {
     const data = supabase.from('books').select().eq(key, value);
     return data;

@@ -1,4 +1,4 @@
-// import Link from "next/link";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleCheck } from "@fortawesome/free-regular-svg-icons";
 
@@ -10,11 +10,15 @@ const BookCard = (data) => {
     return (
         <div className="book-card">
             <div className="book-card-image-container">
-                {thumbnail && (<img className="book-thumbnail" src={thumbnail} alt={book.title} />)}
-                {!thumbnail && (<span className="book-card-image"></span>)}
+                <Link to={`/books/${encodeURIComponent(book.id)}`}>
+                    {thumbnail && (<img className="book-thumbnail" src={thumbnail} alt={book.title} />)}
+                    {!thumbnail && (<span className="book-card-image"></span>)}
+                </Link>
             </div>
-            <h5 className="book-card-title">{book.title}</h5>
-            <h6 className="book-card-author">{book.author}</h6>
+            <Link to={`/books/${encodeURIComponent(book.id)}`}>
+                <h5 className="book-card-title">{book.title}</h5>
+                <h6 className="book-card-author">{book.author}</h6>
+            </Link>
             {book.exclusive_shelf === 'read' && (
                 <div className="book-card-read">
                     <FontAwesomeIcon icon={faCircleCheck} />
