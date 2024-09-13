@@ -1,10 +1,9 @@
 import { Outlet } from 'react-router-dom';
-import { supabase } from '../lib/supabase';
-import { Auth } from '@supabase/auth-ui-react'
-import { ThemeSupa } from '@supabase/auth-ui-shared'
 import { useEffect, useState, useCallback } from 'react';
+import { supabase } from '../lib/supabase';
+import { ThemeSupa } from '@supabase/auth-ui-shared'
+import Auth from '../Auth';
 import Header from '../ui/Header';
-import Dashboard from '../ui/Dashboard';
 
 const Root = () => {
     const [session, setSession] = useState('');

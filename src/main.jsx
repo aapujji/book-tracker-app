@@ -1,3 +1,4 @@
+import './css/main.css';
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
@@ -6,7 +7,7 @@ import Dashboard from './ui/Dashboard.jsx';
 import BookList from './ui/BookList.jsx';
 import BookPage from './ui/Book.jsx';
 import EditBook from './ui/EditBook.jsx';
-import './scss/main.scss';
+import AddBook from './ui/AddBook.jsx';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: '/books/edit/:id',
         element: <EditBook />
+      },
+      {
+        path: '/books/new',
+        element: <AddBook />
       }
     ],
   },

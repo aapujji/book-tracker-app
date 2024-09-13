@@ -18,7 +18,7 @@ const MonthBookCardList = () => {
     const getBooks = useCallback(async (month) => {
         const booksData = await getBooksDataByBookshelf(`%${month}-tbr%`);
         setBooks(booksData.data);
-        console.log(booksData);
+        // console.log(booksData);
         const booksRead = booksData.data.filter(book => book.exclusive_shelf === 'read');
         setReadCount(booksRead.length);
     }, []);

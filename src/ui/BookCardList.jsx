@@ -1,7 +1,7 @@
 import BookCard from "./BookCard";
 
 const BookCardList = (data) => {
-    console.log(data);
+    // console.log(data);
     const books = data.books;
 
     return (

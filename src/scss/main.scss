@@ -17,6 +17,10 @@ body {
     margin: 0 auto;
 }
 
+ul, li {
+    list-style-type: none;
+}
+
 a {
     color: $eerie-black;
 }

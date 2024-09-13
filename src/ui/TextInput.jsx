@@ -5,7 +5,7 @@ const TextInput = (data) => {
                 <span className="">{data.label}</span>
             </label>
             <input 
-                className="form-field-input" 
+                className={`${data.className} form-field-input`}
                 type={data.type || 'text'}
                 id={data.id}
                 name={data.id}
